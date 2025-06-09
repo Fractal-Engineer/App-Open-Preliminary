@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/script.js"></script>
+    <title>App Opener</title>
+    <script>
+        async function callPythonFunction() {
+            const response = await fetch('/run-function', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            alert(data.message); // Display the Python function's result
+        }
+    </script>
+</head>
+<body>
+    <h1>Open Apps With Buttons</h1>
+    <button class="app-file-explorer" onclick="callPythonFunction()">Open File Explorer</button>
+    <button class="app-file-explorer" onclick="callPythonFunction()">Open File Explorer</button>
+</body>
+</html>

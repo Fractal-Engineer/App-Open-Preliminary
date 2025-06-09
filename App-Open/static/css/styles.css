@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(0, 0, 20);
+    color: white;
+}
+
+.app-file-explorer{
+    height: 50px;
+    width: 200px;
+    background-color: darkturquoise;
+    border-radius: 12px;
+    color: white;
+}
